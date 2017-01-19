@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+
+# testing
+test-results
+
+# misc
+.DS_Store
+npm-debug.log
