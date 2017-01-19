@@ -1,0 +1,20 @@
+{
+  "name": "one-amex-jest-preset",
+  "description": "An opinionated Jest preset for ONEAmex modules",
+  "version": "1.0.0",
+  "author": "UI Engineering (https://stash.aexp.com/stash/projects/UIE)",
+  "keywords": [
+    "jest-preset",
+    "ONEAmex",
+    "awesome"
+  ],
+  "dependencies": {
+    "jasmine-reporters": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.aexp.com/uie/one-amex-jest-preset.git"
+  },
+  "files": ["jest-preset.json", "jest-setup.js"],
+  "license": "See LICENSE in LICENSE"
+}
