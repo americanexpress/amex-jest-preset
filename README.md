@@ -21,6 +21,8 @@ where Jenkins expects it
 
 - [snapshotSerializers](http://facebook.github.io/jest/docs/configuration.html#snapshotserializers-array-string) tells Jest to use [enzyme-to-json's](https://github.com/adriantoine/enzyme-to-json) serializer
 
+- [moduleNameMapper](http://facebook.github.io/jest/docs/configuration.html#modulenamemapper-object-string-string) tells Jest to treat CSS modules as identity objects
+
 Usage
 -----
 In your package.json:
@@ -38,3 +40,5 @@ In your package.json:
 And... that's it! You now have all the boilerplate Jest configurations set up for you! Running ```jest``` from your ```npm test``` script will use all these configurations!
 
 **Note:** You can (but better have a good reason to) override these configurations by [providing your own](http://facebook.github.io/jest/docs/configuration.html) ```jest``` configuration in ```package.json```
+
+If you feel that you have a configuration that is applicable to everyone open up a PR!
