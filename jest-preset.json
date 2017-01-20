@@ -19,6 +19,9 @@
       "lines": 90,
       "statements": 90
     }
-},
-  "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "moduleNameMapper": {
+    "\\.(css|scss)$": "identity-obj-proxy"
+  }
 }
