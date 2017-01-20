@@ -9,12 +9,16 @@
     "awesome"
   ],
   "dependencies": {
+    "identity-obj-proxy": "^3.0.0",
     "jasmine-reporters": "^2.2.0"
   },
   "repository": {
     "type": "git",
     "url": "ssh:****.com/uie/one-amex-jest-preset.git"
   },
-  "files": ["jest-preset.json", "jest-setup.js"],
+  "files": [
+    "jest-preset.json",
+    "jest-setup.js"
+  ],
   "license": "See LICENSE in LICENSE"
 }
