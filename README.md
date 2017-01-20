@@ -21,6 +21,8 @@ where Jenkins expects it
 
 - [snapshotSerializers](http://facebook.github.io/jest/docs/configuration.html#snapshotserializers-array-string) tells Jest to use [enzyme-to-json's](https://github.com/adriantoine/enzyme-to-json) serializer
 
+- [moduleNameMapper](http://facebook.github.io/jest/docs/configuration.html#modulenamemapper-object-string-string) tells Jest to treat CSS modules as identity objects
+
 Usage
 -----
 In your package.json:
