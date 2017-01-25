@@ -7,3 +7,6 @@ test-results
 # misc
 .DS_Store
 npm-debug.log
+
+# webstorm
+.idea
