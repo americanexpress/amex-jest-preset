@@ -26,13 +26,14 @@ where Jenkins expects it
 Usage
 -----
 
-Install with npm by running ```npm install --save-dev one-amex-jest-preset```
+Install with npm by running `npm install --save-dev one-amex-jest-preset`
 
 And in your package.json:
 ```
 ...
-"jest": { "preset": "one-amex-jest-preset" }
-
+"jest": {
+  "preset": "one-amex-jest-preset"
+}
 ...
 ```
 And... that's it! You now have all the boilerplate Jest configurations set up for you! Running ```jest``` from your ```npm test``` script will use all these configurations!
