@@ -25,15 +25,14 @@ where Jenkins expects it
 
 Usage
 -----
-In your package.json:
+
+Install with npm by running `npm install --save-dev one-amex-jest-preset`
+
+And in your package.json:
 ```
 ...
-"jest": { "preset": "one-amex-jest-preset" }
-...
-"devDependencies": {
-  ...
-  "one-amex-jest-preset": "^1.0.1"
-  ...
+"jest": {
+  "preset": "one-amex-jest-preset"
 }
 ...
 ```
