@@ -13,7 +13,8 @@
     "jasmine-reporters": "^2.2.0"
   },
   "devDependencies": {
-    "jest": "^18.1.0"
+    "jest": "^18.1.0",
+    "one-amex-jest-preset": "."
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "test": "jest"
+  },
+  "jest": {
+    "preset": "one-amex-jest-preset"
   },
   "publishConfig": {
     "registry": "http://acp-repoadm.app.aexp.com/artifactory/api/npm/npm-virtual"
