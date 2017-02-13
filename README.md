@@ -3,7 +3,7 @@ one-amex-jest-preset
 
 An opinionated [Jest preset](http://facebook.github.io/jest/docs/configuration.html#preset-string) for One Amex modules.
 
-For a React specific Jest preset see: [one-amex-jest-preset-react](https://stash.aexp.com/stash/projects/UIE/repos/one-amex-jest-preset-react/browse)
+For a React specific Jest preset use: [one-amex-jest-preset-react](https://stash.aexp.com/stash/projects/UIE/repos/one-amex-jest-preset-react/browse)
 
 Configurations
 ------------
@@ -19,7 +19,7 @@ where Jenkins expects it
 
 - [coverageReporters](http://facebook.github.io/jest/docs/configuration.html#coveragereporters-array-string) tells Jest to report coverage as `text` which outputs to your console, `cobertura` format which Jenkins uses, and `lcov` which produces the pretty html you are all used to seeing from Istanbul
 
-- [coverageThreshold](http://facebook.github.io/jest/docs/configuration.html#coveragethreshold-object) tells Jest to return failure unless code coverage is 100% for branch, function, line, and statement. (yes this does mean that your build will fail if you don't have 100% code coverage)
+- [coverageThreshold](http://facebook.github.io/jest/docs/configuration.html#coveragethreshold-object) tells Jest to return failure unless code coverage is 100% for branch, function, line, and statement. (Yes this does mean that your build will fail if you don't have 100% code coverage)
 
 Usage
 -----
@@ -38,4 +38,4 @@ And... that's it! You now have all the boilerplate Jest configurations set up fo
 
 **Note:** You can (but better have a good reason to) override these configurations by [providing your own](http://facebook.github.io/jest/docs/configuration.html) `jest` configuration in `package.json`
 
-If you feel that you have a configuration that is applicable to everyone [open up a PR!](https://stash.aexp.com/stash/projects/UIE/repos/one-amex-jest-preset/pull-requests)
+If you feel that you have a configuration that is applicable to everyone [fork](https://stash.aexp.com/stash/projects/UIE/repos/one-amex-jest-preset?fork) and [open a PR](https://stash.aexp.com/stash/projects/UIE/repos/one-amex-jest-preset/pull-requests?create)!
