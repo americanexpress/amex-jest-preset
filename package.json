@@ -10,7 +10,8 @@
     "quality"
   ],
   "dependencies": {
-    "jasmine-reporters": "^2.2.0"
+    "jasmine-reporters": "^2.2.0",
+    "one-amex-test-utils": "^1.0.0"
   },
   "devDependencies": {
     "jest": "^18.1.0",
