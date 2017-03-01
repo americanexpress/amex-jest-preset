@@ -1,7 +1,7 @@
 {
   "name": "one-amex-jest-preset",
   "description": "An opinionated Jest preset for One Amex modules",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "UI Engineering (****.com/stash/projects/UIE)",
   "keywords": [
     "jest",
