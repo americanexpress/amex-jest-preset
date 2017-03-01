@@ -30,7 +30,10 @@
     "test": "jest"
   },
   "jest": {
-    "preset": "one-amex-jest-preset"
+    "preset": "one-amex-jest-preset",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/jest-setup.js"
+    ]
   },
   "publishConfig": {
     "registry": "****.com/artifactory/api/npm/npm-virtual"
