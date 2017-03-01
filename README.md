@@ -8,7 +8,7 @@ For a React specific Jest preset use: [one-amex-jest-preset-react](****.com/stas
 Configurations
 ------------
 
-- [setupTestFrameworkScriptFile](http://facebook.github.io/jest/docs/configuration.html#setuptestframeworkscriptfile-string) is used to load our `jest-setup.js` file from where we tell Jest to output in a junit test result format that Jenkins can use for pretty test result reports
+- [setupTestFrameworkScriptFile](http://facebook.github.io/jest/docs/configuration.html#setuptestframeworkscriptfile-string) is used to load our `jest-setup.js` file from where we tell Jest to output in a junit test result format that Jenkins can use for pretty test result reports and to add [one-amex-test-utils](****.com/stash/projects/UIE/repos/one-amex-test-utils/browse)
 
 - [collectCoverage](http://facebook.github.io/jest/docs/configuration.html#collectcoverage-boolean) tells Jest to collect code coverage metrics on every test run
 
