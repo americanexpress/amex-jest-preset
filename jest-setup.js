@@ -2,7 +2,7 @@
 // this is a dev-time file
 // ignoring this for istanbul because it is config file that is likely temp and to be replaced with https://www.npmjs.com/package/jest-junit-reporter
 const jasmineReporters = require('jasmine-reporters');
-const matchers = require('one-amex-test-utils').matchers;
+const matchers = require('amex-test-utils').matchers;
 
 expect.extend(matchers);
 

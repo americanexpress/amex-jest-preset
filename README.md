@@ -1,14 +1,12 @@
 one-amex-jest-preset
 ====================
 
-An opinionated [Jest preset](http://facebook.github.io/jest/docs/configuration.html#preset-string) for One Amex modules.
+An opinionated [Jest preset](http://facebook.github.io/jest/docs/configuration.html#preset-string)
 
-For a React specific Jest preset use: [one-amex-jest-preset-react](****.com/stash/projects/UIE/repos/one-amex-jest-preset-react/browse)
+For a React specific Jest preset use: [amex-jest-preset-react](https://github.com/americanexpress/amex-jest-preset-react)
 
-Configurations
-------------
-
-- [setupTestFrameworkScriptFile](http://facebook.github.io/jest/docs/configuration.html#setuptestframeworkscriptfile-string) is used to load our `jest-setup.js` file from where we tell Jest to output in a junit test result format that Jenkins can use for pretty test result reports and to add [one-amex-test-utils](****.com/stash/projects/UIE/repos/one-amex-test-utils/browse)
+## Configurations
+- [setupTestFrameworkScriptFile](http://facebook.github.io/jest/docs/configuration.html#setuptestframeworkscriptfile-string) is used to load our `jest-setup.js` file from where we tell Jest to output in a junit test result format that Jenkins can use for pretty test result reports. Also adds [one-amex-test-utils](https://github.com/americanexpress/amex-test-utils)
 
 - [collectCoverage](http://facebook.github.io/jest/docs/configuration.html#collectcoverage-boolean) tells Jest to collect code coverage metrics on every test run
 
@@ -21,21 +19,39 @@ where Jenkins expects it
 
 - [coverageThreshold](http://facebook.github.io/jest/docs/configuration.html#coveragethreshold-object) tells Jest to return failure unless code coverage is 100% for branch, function, line, and statement. (Yes this does mean that your build will fail if you don't have 100% code coverage)
 
-Usage
------
+## Usage
 
-Install with npm by running `npm install --save-dev one-amex-jest-preset`
-
-And in your package.json:
+1. Install:
+```bash
+npm install --save-dev amex-jest-preset
 ```
+
+2. And in your package.json:
+```json
 ...
 "jest": {
-  "preset": "one-amex-jest-preset"
+    "preset": "amex-jest-preset"
 }
 ...
 ```
 And... that's it! You now have all the boilerplate Jest configurations set up for you! Running `jest` from your `npm test` script will use all these configurations!
 
-**Note:** You can (but better have a good reason to) override these configurations by [providing your own](http://facebook.github.io/jest/docs/configuration.html) `jest` configuration in `package.json`
+**Note:** You can (but better have a good reason to) override these configurations by [providing your own](http://facebook.github.io/jest/docs/configuration.html) `jest` configuration
 
-If you feel that you have a configuration that is applicable to everyone [fork](****.com/stash/projects/UIE/repos/one-amex-jest-preset?fork) and [open a PR](****.com/stash/projects/UIE/repos/one-amex-jest-preset/pull-requests?create)!
+## Contributing
+We welcome Your interest in the American Express Open Source Community on Github.
+Any Contributor to any Open Source Project managed by the American Express Open
+Source Community must accept and sign an Agreement indicating agreement to the
+terms below. Except for the rights granted in this Agreement to American Express
+and to recipients of software distributed by American Express, You reserve all
+right, title, and interest, if any, in and to Your Contributions. Please [fill
+out the Agreement](http://goo.gl/forms/mIHWH1Dcuy).
+
+
+## License
+Any contributions made under this project will be governed by the [Apache License
+2.0](https://github.com/americanexpress/babel-preset-amex/blob/master/LICENSE.txt).
+
+## Code of Conduct
+This project adheres to the [American Express Community Guidelines](https://github.com/americanexpress/babel-preset-amex/wiki/Code-of-Conduct).
+By participating, you are expected to honor these guidelines.
