@@ -5,12 +5,11 @@
   "keywords": [
     "jest",
     "preset",
-    "ame",
+    "amex",
     "quality"
   ],
   "dependencies": {
-    "jasmine-reporters": "^2.2.0",
-    "jest-json-schema": "^1.0.0"
+    "jasmine-reporters": "^2.2.0"
   },
   "devDependencies": {
     "jest": "^18.1.0",
@@ -18,11 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/americanexpress/one-amex-jest-preset.git"
+    "url": "https://github.com/americanexpress/amex-jest-preset.git"
   },
   "files": [
     "jest-preset.json",
     "jest-setup.js"
+  ],
+  "contributors": [
+    "Andres Escobar",
+    "Jimmy King"
   ],
   "author": "Andres Escobar <andres.escobar@aexp.com> (https://github.com/anescobar1991)",
   "license": "Apache-2.0",
