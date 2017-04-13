@@ -1,4 +1,4 @@
-one-amex-jest-preset
+amex-jest-preset
 ====================
 
 An opinionated [Jest preset](http://facebook.github.io/jest/docs/configuration.html#preset-string)
