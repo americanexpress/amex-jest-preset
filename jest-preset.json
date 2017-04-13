@@ -1,5 +1,5 @@
 {
-  "setupTestFrameworkScriptFile": "<rootDir>/node_modules/one-amex-jest-preset/jest-setup.js",
+  "setupTestFrameworkScriptFile": "<rootDir>/node_modules/amex-jest-preset/jest-setup.js",
   "collectCoverage": true,
   "collectCoverageFrom": [
     "**/*.js",
