@@ -1,44 +1,41 @@
 {
-  "name": "one-amex-jest-preset",
-  "description": "An opinionated Jest preset for One Amex modules",
+  "name": "amex-jest-preset",
+  "description": "An opinionated Jest preset",
   "version": "2.1.0",
   "keywords": [
     "jest",
     "preset",
-    "One Amex",
+    "amex",
     "quality"
   ],
-  "contributors": [
-    "Andres Escobar <Andres.Escobar@aexp.com>",
-    "Jimmy King <Jimmy.King@aexp.com>"
-  ],
   "dependencies": {
-    "jasmine-reporters": "^2.2.0",
-    "one-amex-test-utils": "^1.0.0"
+    "jasmine-reporters": "^2.2.0"
   },
   "devDependencies": {
     "jest": "^18.1.0",
-    "one-amex-jest-preset": "."
+    "amex-jest-preset": "."
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.aexp.com/uie/one-amex-jest-preset.git"
+    "url": "https://github.com/americanexpress/amex-jest-preset.git"
   },
   "files": [
     "jest-preset.json",
     "jest-setup.js"
   ],
-  "license": "SEE LICENSE IN LICENSE",
+  "contributors": [
+    "Andres Escobar",
+    "Jimmy King"
+  ],
+  "author": "Andres Escobar <andres.escobar@aexp.com> (https://github.com/anescobar1991)",
+  "license": "Apache-2.0",
   "scripts": {
     "test": "jest"
   },
   "jest": {
-    "preset": "one-amex-jest-preset",
+    "preset": "amex-jest-preset",
     "coveragePathIgnorePatterns": [
       "<rootDir>/jest-setup.js"
     ]
-  },
-  "publishConfig": {
-    "registry": "http://acp-repoadm.app.aexp.com/artifactory/api/npm/npm-virtual"
   }
 }
