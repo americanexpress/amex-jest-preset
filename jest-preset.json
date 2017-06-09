@@ -2,7 +2,7 @@
   "setupTestFrameworkScriptFile": "<rootDir>/node_modules/one-amex-jest-preset/jest-setup.js",
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "src/**/*.{js,jsx}",
+    "**/*.js",
     "!**/node_modules/**",
     "!test-results/**"
   ],
@@ -14,15 +14,11 @@
   ],
   "coverageThreshold": {
     "global": {
-      "branches": 90,
-      "functions": 90,
-      "lines": 90,
-      "statements": 90
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
     }
-  },
-  "snapshotSerializers": ["enzyme-to-json/serializer"],
-  "moduleNameMapper": {
-    "\\.(css|scss)$": "identity-obj-proxy"
   },
   "modulePathIgnorePatterns": []
 }
