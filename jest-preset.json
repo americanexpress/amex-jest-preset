@@ -4,6 +4,9 @@
   "collectCoverageFrom": [
     "**/*.js",
     "!**/node_modules/**",
+    "!build/**",
+    "!dist/**",
+    "!lib/**",
     "!test-results/**"
   ],
   "coverageDirectory": "./test-results/coverage",
