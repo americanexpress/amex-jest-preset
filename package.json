@@ -11,7 +11,8 @@
   "scripts": {
     "test": "jest",
     "posttest": "npm run lint",
-    "lint": "eslint ./ --ignore-path .gitignore --ext .js"
+    "lint": "eslint ./ --ignore-path .gitignore --ext .js",
+    "postinstall": "node create-jest-preset.js"
   },
   "dependencies": {
     "jest-json-schema": "^1.2.0",
@@ -31,6 +32,7 @@
     "url": "https://github.com/americanexpress/amex-jest-preset.git"
   },
   "files": [
+    "create-jest-preset.js",
     "jest-preset.json",
     "jest-setup.js",
     "html-report-creator.js",

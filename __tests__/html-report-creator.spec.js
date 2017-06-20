@@ -26,7 +26,6 @@ function buildMockResult(mockResult = {}) {
     success: true,
     testResults: [
       { console: [],
-        failureMessage: null,
         perfStats: {
           end: 1497401364334,
           start: 1497401364037,
@@ -34,6 +33,7 @@ function buildMockResult(mockResult = {}) {
         testFilePath: '/path/to/__tests__/test.spec.js',
         testResults: [
           {
+            failureMessages: [],
             duration: 4,
             fullName: 'test should work',
             status: 'passed',
@@ -67,7 +67,7 @@ describe('html-report-creator', () => {
   });
 
   it('should render correctly if there are test execution errors in a suite', () => {
-    const reportCreator = setupTest();
+    const createHtmlReport = setupTest();
     const mockResult = buildMockResult(
       {
         testResults: [
@@ -80,14 +80,14 @@ describe('html-report-creator', () => {
       }
     );
 
-    reportCreator(mockResult);
+    createHtmlReport(mockResult);
     expect(
       prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
     ).toMatchSnapshot();
   });
 
   it('should not display pending tests', () => {
-    const reportCreator = setupTest();
+    const createHtmlReport = setupTest();
     const mockResult = buildMockResult(
       {
         numPassedTestSuites: 0,
@@ -102,24 +102,24 @@ describe('html-report-creator', () => {
       }
     );
 
-    reportCreator(mockResult);
+    createHtmlReport(mockResult);
     expect(
       prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
     ).toMatchSnapshot();
   });
 
   it('should correctly render passing tests', () => {
-    const reportCreator = setupTest();
+    const createHtmlReport = setupTest();
     const mockResult = buildMockResult();
 
-    reportCreator(mockResult);
+    createHtmlReport(mockResult);
     expect(
       prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
     ).toMatchSnapshot();
   });
 
   it('should correctly render failing tests', () => {
-    const reportCreator = setupTest();
+    const createHtmlReport = setupTest();
     const mockResult = buildMockResult(
       {
         numPassedTestSuites: 0,
@@ -134,14 +134,14 @@ describe('html-report-creator', () => {
       }
     );
 
-    reportCreator(mockResult);
+    createHtmlReport(mockResult);
     expect(
       prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
     ).toMatchSnapshot();
   });
 
   it('should render failure message as a link if test is for an image snapshot', () => {
-    const reportCreator = setupTest();
+    const createHtmlReport = setupTest();
     const mockResult = buildMockResult(
       {
         numPassedTestSuites: 0,
@@ -156,7 +156,7 @@ describe('html-report-creator', () => {
       }
     );
 
-    reportCreator(mockResult);
+    createHtmlReport(mockResult);
     expect(
       prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
     ).toMatchSnapshot();
@@ -164,20 +164,20 @@ describe('html-report-creator', () => {
 
   it('should write output to default path if JEST_TEST_REPORT_PATH does not exist', () => {
     delete process.env.JEST_TEST_REPORT_PATH;
-    const reportCreator = setupTest();
+    const createHtmlReport = setupTest();
     const mockResult = buildMockResult();
 
-    reportCreator(mockResult);
+    createHtmlReport(mockResult);
     expect(fs.writeFileSync.mock.calls[0][0]).toBe('/path/to/something/test-results/test-report.html');
   });
 
   it('should write output to JEST_TEST_REPORT_PATH if variable exists', () => {
     const customTestReportPath = 'custom/path/to/test-report.html';
     process.env.JEST_TEST_REPORT_PATH = customTestReportPath;
-    const reportCreator = setupTest();
+    const createHtmlReport = setupTest();
     const mockResult = buildMockResult();
 
-    reportCreator(mockResult);
+    createHtmlReport(mockResult);
     expect(fs.writeFileSync.mock.calls[0][0]).toBe(customTestReportPath);
   });
 

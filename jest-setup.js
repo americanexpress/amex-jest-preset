@@ -13,6 +13,7 @@
  */
 
 const matchersWithOptions = require('jest-json-schema').matchersWithOptions;
+
 const formats = {
   bcp47: /^[a-z]{2}-[A-Z]{2}$/,
 };
