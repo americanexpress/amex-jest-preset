@@ -9,6 +9,9 @@ const jestPreset = {
   collectCoverageFrom: [
     '**/*.js',
     '!**/node_modules/**',
+    '!build/**',
+    '!dist/**',
+    '!lib/**',
     '!test-results/**',
   ],
   coverageDirectory: '<rootDir>/test-results/coverage',
