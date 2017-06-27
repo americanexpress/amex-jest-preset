@@ -3,17 +3,18 @@ amex-jest-preset
 
 An opinionated [Jest preset](http://facebook.github.io/jest/docs/configuration.html#preset-string)
 
-For a React specific Jest preset use: [amex-jest-preset-react](https://github.com/americanexpress/amex-jest-preset-react)
+For a React specific Jest preset use: [amex-jest-preset-react](https://github.com/americanexpress/amex-jest-preset-react) which extends off of this preset and adds some React specific configurations.
 
 ## Configurations
-- [setupTestFrameworkScriptFile](http://facebook.github.io/jest/docs/configuration.html#setuptestframeworkscriptfile-string) is used to load our `jest-setup.js` file from where we tell Jest to output in a junit test result format that Jenkins can use for pretty test result reports. We also load [jest-json-schema](https://github.com/americanexpress/jest-json-schema) in here for you so you can use it in your tests.
+- [setupTestFrameworkScriptFile](http://facebook.github.io/jest/docs/configuration.html#setuptestframeworkscriptfile-string) is where we load [jest-json-schema](https://github.com/americanexpress/jest-json-schema) so you have access to it throughout your tests.
+
+- [testResultsProcessor](http://facebook.github.io/jest/docs/en/configuration.html#testresultsprocessor-string) is used to output test results onto our html report creator. That way pretty html test results are created in `<rootDir>/test-results/`
 
 - [collectCoverage](http://facebook.github.io/jest/docs/configuration.html#collectcoverage-boolean) tells Jest to collect code coverage metrics on every test run
 
 - [collectCoverageFrom](http://facebook.github.io/jest/docs/configuration.html#collectcoveragefrom-array) tells Jest what directories to collect and not collect coverage metrics from
 
 - [coverageDirectory](http://facebook.github.io/jest/docs/configuration.html#coveragedirectory-string) tells Jest to output the coverage reports into the `./test-results/coverage` directory
-where Jenkins expects it
 
 - [coverageReporters](http://facebook.github.io/jest/docs/configuration.html#coveragereporters-array-string) tells Jest to report coverage as `text` which outputs to your console, `cobertura` format which Jenkins uses, and `lcov` which produces the pretty html you are all used to seeing from Istanbul
 

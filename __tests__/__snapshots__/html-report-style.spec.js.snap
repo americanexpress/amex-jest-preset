@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`html-report-creator should export styles 1`] = `
+"
+  html, body {
+    font-family: sans-serif;
+    font-size: 1rem;
+  }
+  body {
+    padding: 1rem 1rem;
+  }
+  .summary {
+    color: #999;
+    margin-bottom: 1em;
+  }
+  .suite-info {
+    padding-bottom: 1em;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: black;
+  }
+  .suite-table {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .suite-table tr.passed {
+    background-color: mintcream;
+    color: green;
+  }
+  .suite-table tr.failed {
+    background-color: LavenderBlush;
+    color: red;
+  }
+  .suite-table td {
+    font-size: 0.85rem;
+    border-bottom: 1px solid #aaa;
+    vertical-align: top;
+    padding: 0.5rem;
+  }
+  .suite-table span.result {
+    float: right;
+  }
+"
+`;
