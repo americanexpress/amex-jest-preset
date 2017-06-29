@@ -12,22 +12,11 @@
  * the License.
  */
 
-// thanks to jest
-// this is a dev-time file
-// ignoring this for istanbul because it is config file that is likely temp and to be replaced with https://www.npmjs.com/package/jest-junit-reporter
-const jasmineReporters = require('jasmine-reporters');
 const matchersWithOptions = require('jest-json-schema').matchersWithOptions;
 
 const formats = {
   bcp47: /^[a-z]{2}-[A-Z]{2}$/,
-}
+};
 
+// eslint-disable-next-line no-undef
 expect.extend(matchersWithOptions({ formats }));
-
-jasmine.getEnv().addReporter(
-  new jasmineReporters.JUnitXmlReporter({
-    consolidateAll: true,
-    savePath: './test-results',
-    filePrefix: 'junit',
-  })
-);
