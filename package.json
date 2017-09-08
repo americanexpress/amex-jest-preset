@@ -1,7 +1,7 @@
 {
   "name": "amex-jest-preset",
   "description": "An opinionated Jest preset",
-  "version": "4.0.2",
+  "version": "4.1.0",
   "keywords": [
     "jest",
     "preset",
@@ -25,7 +25,7 @@
     "amex-jest-preset": ".",
     "eslint": "^3.19.0",
     "eslint-config-amex": "^6.0.0",
-    "jest": "^20.0.0",
+    "jest": "^21.0.2",
     "lodash": "^4.17.4"
   },
   "repository": {
