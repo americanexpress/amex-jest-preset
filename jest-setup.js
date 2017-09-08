@@ -14,9 +14,10 @@
 
 const matchersWithOptions = require('jest-json-schema').matchersWithOptions;
 
-const formats = {
-  bcp47: /^[a-z]{2}-[A-Z]{2}$/,
-};
-
 // eslint-disable-next-line no-undef
-expect.extend(matchersWithOptions({ formats }));
+expect.extend(matchersWithOptions({
+  extendRefs: true,
+  formats: {
+    bcp47: /^[a-z]{2}-[A-Z]{2}$/,
+  },
+}));

@@ -14,6 +14,11 @@
  */
 
 describe('jest-setup', () => {
+  const consoleLogSpy = jest.spyOn(console, 'log');
+  const consoleWarnSpy = jest.spyOn(console, 'warn');
+
+  beforeEach(() => jest.clearAllMocks());
+
   it('should extend expect global to add jest-json-schema matcher', () => {
     const schema = {
       properties: {
@@ -24,5 +29,45 @@ describe('jest-setup', () => {
     expect(
       () => expect({ hello: 'world' }).toMatchSchema(schema)
     ).not.toThrow();
+  });
+
+  it('should allow extending of $refs in schemas', () => {
+    const schema = {
+      definitions: {
+        ref: { type: 'integer' },
+      },
+      properties: {
+        foo: {
+          $ref: '#/definitions/ref',
+          minimum: 10,
+        },
+      },
+    };
+    expect(
+      () => expect({ foo: 10 }).toMatchSchema(schema)
+    ).not.toThrow();
+    expect(
+      () => expect({ foo: 1 }).toMatchSchema(schema)
+    ).toThrow();
+    // Current version only logs a warning when extending refs without the option,
+    // in next major version refs will not be extended by default
+    expect(consoleLogSpy).not.toHaveBeenCalled();
+  });
+
+  it('should add the expected formats', () => {
+    const schema = {
+      properties: {
+        locale: {
+          type: 'string',
+          format: 'bcp47',
+        },
+      },
+    };
+    expect(
+      () => expect({ locale: 'en-US' }).toMatchSchema(schema)
+    ).not.toThrow();
+    // Current version only logs a warning for unrecognized formats, next major
+    // will throw an exception
+    expect(consoleWarnSpy).not.toHaveBeenCalled();
   });
 });
