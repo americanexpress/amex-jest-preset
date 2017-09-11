@@ -28,6 +28,7 @@ const jestPreset = {
     '!lib/**',
     '!test-results/**',
   ],
+  cacheDirectory: '<rootDir>/test-results/cache',
   coverageDirectory: '<rootDir>/test-results/coverage',
   coverageReporters: [
     'text',
