@@ -15,8 +15,10 @@
  */
 
 const fs = require('fs');
+const isCI = require('is-ci');
 
 const jestPreset = {
+  cache: !isCI,
   setupTestFrameworkScriptFile: require.resolve('./jest-setup'),
   testResultsProcessor: require.resolve('./html-report-creator'),
   collectCoverage: true,

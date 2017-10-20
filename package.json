@@ -16,6 +16,7 @@
     "postinstall": "node create-jest-preset.js"
   },
   "dependencies": {
+    "is-ci": "^1.0.10",
     "jest-json-schema": "^1.2.0",
     "mkdirp": "^0.5.1",
     "strip-ansi": "^3.0.1",
