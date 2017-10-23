@@ -22,10 +22,16 @@ describe('jest-preset.json', () => {
     fs.writeFileSync = jest.fn();
   });
 
+  beforeEach(() => {
+    jest.resetModules();
+    jest.clearAllMocks();
+  });
+
   it('should produce valid parseable json', () => {
     require('../create-jest-preset');
 
     expect(JSON.parse(fs.writeFileSync.mock.calls[0][1])).toMatchObject({
+      cache: expect.any(Boolean),
       setupTestFrameworkScriptFile: expect.any(String),
       testResultsProcessor: expect.any(String),
       collectCoverage: true,
@@ -52,6 +58,20 @@ describe('jest-preset.json', () => {
         },
       },
     });
+  });
+
+  it('should disable jest cache if running on CI server', () => {
+    jest.doMock('is-ci', () => true);
+    require('../create-jest-preset');
+
+    expect(JSON.parse(fs.writeFileSync.mock.calls[0][1])).toHaveProperty('cache', false);
+  });
+
+  it('should enable jest cache if running outside of a CI server', () => {
+    jest.doMock('is-ci', () => false);
+    require('../create-jest-preset');
+
+    expect(JSON.parse(fs.writeFileSync.mock.calls[0][1])).toHaveProperty('cache', true);
   });
 
   afterAll(() => {
