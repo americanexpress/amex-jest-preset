@@ -1,7 +1,7 @@
 {
   "name": "amex-jest-preset",
   "description": "An opinionated Jest preset",
-  "version": "4.3.0",
+  "version": "4.3.1",
   "keywords": [
     "jest",
     "preset",
@@ -12,7 +12,7 @@
     "test": "jest",
     "posttest": "npm run lint",
     "lint": "eslint ./ --ignore-path .gitignore --ext .js",
-    "prepublishOnly": "npm test && rm -f jest-preset.json",
+    "prepublishOnly": "npm test",
     "postinstall": "node create-jest-preset.js"
   },
   "dependencies": {
@@ -35,7 +35,6 @@
   },
   "files": [
     "create-jest-preset.js",
-    "jest-preset.json",
     "jest-setup.js",
     "html-report-creator.js",
     "html-report-style.js"
