@@ -20,6 +20,8 @@ For a React specific Jest preset use: [amex-jest-preset-react](https://github.co
 
 - [coverageThreshold](http://facebook.github.io/jest/docs/en/configuration.html#coveragethreshold-object) tells Jest to return failure unless code coverage is 100% for branch, function, line, and statement. (Yes this does mean that your build will fail if you don't have 100% code coverage)
 
+- [modulePathIgnorePatterns](https://facebook.github.io/jest/docs/en/configuration.html#modulepathignorepatterns-array-string) tells Jest to not even consider `npm-cache` and `npm` directories for module loading. This prevents issues on CI server where `npm-cache` may be shared across build workspaces.
+
 ## Usage
 
 1. Install:

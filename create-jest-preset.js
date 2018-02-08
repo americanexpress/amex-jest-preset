@@ -45,7 +45,10 @@ const jestPreset = {
       statements: 100,
     },
   },
-  modulePathIgnorePatterns: [],
+  modulePathIgnorePatterns: [
+    'npm-cache',
+    '.npm',
+  ],
 };
 
 fs.writeFileSync('jest-preset.json', JSON.stringify(jestPreset, null, 2));
