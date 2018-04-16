@@ -35,9 +35,7 @@ npm install --save-dev amex-jest-preset
 2. And in your [Jest configuration][]:
 ```json
 {
-  ...
   "preset": "amex-jest-preset"
-  ...
 }
 ```
 And... that's it! You now have all the boilerplate Jest configurations set up for you! Running `jest` from your `npm test` script will use all these configurations!
@@ -50,7 +48,7 @@ It should be noted that if overriding the `setupTestFrameworkScriptFile` you may
 
 ```javascript
 // in custom-jest-setup.js
-require('amex-jest-preset/jest-setup);
+require('amex-jest-preset/jest-setup');
 
 // your own custom setup
 ```
