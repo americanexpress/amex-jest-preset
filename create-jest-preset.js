@@ -30,6 +30,7 @@ const jestPreset = {
     '!lib/**',
     '!test-results/**',
   ],
+  testEnvironment: 'node',
   cacheDirectory: '<rootDir>/.jest-cache',
   coverageDirectory: '<rootDir>/test-results/coverage',
   coverageReporters: [

@@ -22,6 +22,8 @@ For a React specific Jest preset use: [amex-jest-preset-react](https://github.co
 
 - [setupTestFrameworkScriptFile](http://facebook.github.io/jest/docs/en/configuration.html#setuptestframeworkscriptfile-string) is where we load [jest-json-schema](https://github.com/americanexpress/jest-json-schema) so you have access to it throughout your tests.
 
+- [testEnvironment](https://jestjs.io/docs/en/configuration.html#testenvironment-string) tells Jest to use `node` as its test environment. This is done for performance reasons as the full `jsdom` environment is not needed for most tests and including it slows Jest startup time considerably.
+
 - [testResultsProcessor](http://facebook.github.io/jest/docs/en/configuration.html#testresultsprocessor-string) is used to output test results onto our HTML report creator. That way pretty HTML test results are created in `<rootDir>/test-results/`
 
 
