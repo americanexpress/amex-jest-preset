@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /*
  * Copyright (c) 2017 American Express Travel Related Services Company, Inc.
  *
