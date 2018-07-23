@@ -35,6 +35,7 @@ describe('jest-preset.js', () => {
         '!lib/**',
         '!test-results/**',
       ],
+      testEnvironment: 'node',
       coverageDirectory: '<rootDir>/test-results/coverage',
       coverageReporters: [
         'text',
