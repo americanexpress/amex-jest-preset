@@ -14,10 +14,9 @@
  * the License.
  */
 
-const fs = require('fs');
 const isCI = require('is-ci');
 
-const jestPreset = {
+module.exports = {
   cache: !isCI,
   setupTestFrameworkScriptFile: require.resolve('./jest-setup'),
   testResultsProcessor: require.resolve('./html-report-creator'),
@@ -50,5 +49,3 @@ const jestPreset = {
     '.npm',
   ],
 };
-
-fs.writeFileSync('jest-preset.json', JSON.stringify(jestPreset, null, 2));

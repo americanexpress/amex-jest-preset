@@ -8,12 +8,12 @@
     "amex",
     "quality"
   ],
+  "main": "jest-preset.js",
   "scripts": {
     "test": "jest",
     "posttest": "npm run lint",
     "lint": "eslint ./ --ignore-path .gitignore --ext .js",
-    "prepublishOnly": "npm test",
-    "postinstall": "node create-jest-preset.js"
+    "prepublishOnly": "npm test"
   },
   "dependencies": {
     "is-ci": "^1.0.10",
@@ -26,15 +26,18 @@
     "amex-jest-preset": ".",
     "eslint": "^3.19.0",
     "eslint-config-amex": "^6.0.0",
-    "jest": "^21.0.2",
+    "jest": "^23.0.2",
     "lodash": "^4.17.4"
+  },
+  "peerDependencies": {
+    "jest": ">=23.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/americanexpress/amex-jest-preset.git"
   },
   "files": [
-    "create-jest-preset.js",
+    "jest-preset.js",
     "jest-setup.js",
     "html-report-creator.js",
     "html-report-style.js"

@@ -12,25 +12,17 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-const fs = require('fs');
 
-describe('jest-preset.json', () => {
-  let originalFsWriteFileSync;
-
-  beforeAll(() => {
-    originalFsWriteFileSync = fs.writeFileSync;
-    fs.writeFileSync = jest.fn();
-  });
-
+describe('jest-preset.js', () => {
   beforeEach(() => {
     jest.resetModules();
     jest.clearAllMocks();
   });
 
-  it('should produce valid parseable json', () => {
-    require('../create-jest-preset');
+  it('should produce valid jest preset config', () => {
+    const jestPreset = require('../jest-preset');
 
-    expect(JSON.parse(fs.writeFileSync.mock.calls[0][1])).toMatchObject({
+    expect(jestPreset).toMatchObject({
       cache: expect.any(Boolean),
       setupTestFrameworkScriptFile: expect.any(String),
       testResultsProcessor: expect.any(String),
@@ -62,19 +54,15 @@ describe('jest-preset.json', () => {
 
   it('should disable jest cache if running on CI server', () => {
     jest.doMock('is-ci', () => true);
-    require('../create-jest-preset');
+    const jestPreset = require('../jest-preset');
 
-    expect(JSON.parse(fs.writeFileSync.mock.calls[0][1])).toHaveProperty('cache', false);
+    expect(jestPreset).toHaveProperty('cache', false);
   });
 
   it('should enable jest cache if running outside of a CI server', () => {
     jest.doMock('is-ci', () => false);
-    require('../create-jest-preset');
+    const jestPreset = require('../jest-preset');
 
-    expect(JSON.parse(fs.writeFileSync.mock.calls[0][1])).toHaveProperty('cache', true);
-  });
-
-  afterAll(() => {
-    fs.writeFileSync = originalFsWriteFileSync;
+    expect(jestPreset).toHaveProperty('cache', true);
   });
 });
