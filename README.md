@@ -4,6 +4,9 @@ An opinionated [Jest preset](http://facebook.github.io/jest/docs/en/configuratio
 
 For a React specific Jest preset use: [amex-jest-preset-react](https://github.com/americanexpress/amex-jest-preset-react) which extends off of this preset and adds some React specific configurations.
 
+> Want to get paid for your contributions to `amex-jest-preset`?
+> Send your resume to oneamex.careers@aexp.com
+
 ## Configurations
 
 - [cacheDirectory](https://facebook.github.io/jest/docs/en/configuration.html#cachedirectory-string) is used to let Jest know to output its cache within the project workspace (specifically in `<rootDir>/.jest-cache`). This is useful as it eliminates issues caused by several projects sharing the same Jest cache on CI builds.
