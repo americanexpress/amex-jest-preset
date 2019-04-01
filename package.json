@@ -11,9 +11,11 @@
   "main": "jest-preset.js",
   "scripts": {
     "test": "jest",
-    "posttest": "npm run lint",
+    "test:git-history": "commitlint --from origin/master --to HEAD",
+    "posttest": "npm run lint && npm run test:git-history",
     "lint": "eslint ./ --ignore-path .gitignore --ext .js",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm test",
+    "githook:commit-msg": "commitlint --edit $GIT_PARAMS"
   },
   "dependencies": {
     "is-ci": "^1.0.10",
@@ -23,9 +25,12 @@
     "xmlbuilder": "^9.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
     "amex-jest-preset": ".",
     "eslint": "^3.19.0",
     "eslint-config-amex": "^6.0.0",
+    "githook-scripts": "^1.0.1",
     "jest": "^23.0.2",
     "lodash": "^4.17.4"
   },
@@ -51,7 +56,8 @@
   "jest": {
     "preset": "amex-jest-preset",
     "coveragePathIgnorePatterns": [
-      "<rootDir>/jest-setup.js"
+      "<rootDir>/jest-setup.js",
+      "<rootDir>/commitlint.config.js"
     ]
   }
 }
