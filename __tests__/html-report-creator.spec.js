@@ -65,6 +65,7 @@ function setupTest() {
   fs.writeFileSync = jest.fn();
   process.cwd = jest.fn(() => '/path/to/something');
 
+  // eslint-disable-next-line global-require
   return require('../html-report-creator');
 }
 

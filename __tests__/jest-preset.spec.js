@@ -20,6 +20,7 @@ describe('jest-preset.js', () => {
   });
 
   it('should produce valid jest preset config', () => {
+    // eslint-disable-next-line global-require
     const jestPreset = require('../jest-preset');
 
     expect(jestPreset).toMatchObject({
@@ -55,6 +56,7 @@ describe('jest-preset.js', () => {
 
   it('should disable jest cache if running on CI server', () => {
     jest.doMock('is-ci', () => true);
+    // eslint-disable-next-line global-require
     const jestPreset = require('../jest-preset');
 
     expect(jestPreset).toHaveProperty('cache', false);
@@ -62,6 +64,7 @@ describe('jest-preset.js', () => {
 
   it('should enable jest cache if running outside of a CI server', () => {
     jest.doMock('is-ci', () => false);
+    // eslint-disable-next-line global-require
     const jestPreset = require('../jest-preset');
 
     expect(jestPreset).toHaveProperty('cache', true);
