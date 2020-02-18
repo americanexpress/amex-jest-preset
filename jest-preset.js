@@ -16,7 +16,6 @@ const isCI = require('is-ci');
 
 module.exports = {
   cache: !isCI,
-  setupTestFrameworkScriptFile: require.resolve('./jest-setup'),
   testResultsProcessor: require.resolve('./html-report-creator'),
   collectCoverage: true,
   collectCoverageFrom: [
