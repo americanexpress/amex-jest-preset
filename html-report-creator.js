@@ -79,7 +79,7 @@ module.exports = (result) => {
             test.failureMessages.forEach((failureMsg) => {
               const plainFailureMessage = stripAnsi(failureMsg);
               // TODO: need to find better way to when it is an image snapshot
-              if (plainFailureMessage.includes('__image_snapshots__/')) {
+              if (plainFailureMessage && plainFailureMessage.includes('__image_snapshots__/')) {
                 const imageDiffUrl = `${plainFailureMessage.match(':(.*).png')[1]}.png`;
                 failureMsgDiv.ele('a', { href: imageDiffUrl });
               }
