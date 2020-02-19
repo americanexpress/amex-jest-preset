@@ -155,6 +155,28 @@ describe('html-report-creator', () => {
     ).toMatchSnapshot();
   });
 
+  it('should ignore null plainFailureMessages', () => {
+    const createHtmlReport = setupTest();
+    const mockResult = buildMockResult(
+      {
+        numPassedTestSuites: 0,
+        numFailedTestSuites: 1,
+        numPassedTests: 0,
+        numFailedTests: 1,
+        testResults: [
+          {
+            testResults: [{ status: 'failed', failureMessages: [null] }],
+          },
+        ],
+      }
+    );
+
+    createHtmlReport(mockResult);
+    expect(
+      prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
+    ).toMatchSnapshot();
+  });
+
   it('should render failure message as a link if test is for an image snapshot', () => {
     const createHtmlReport = setupTest();
     const mockResult = buildMockResult(
