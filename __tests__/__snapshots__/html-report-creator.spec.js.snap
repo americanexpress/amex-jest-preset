@@ -155,6 +155,83 @@ exports[`html-report-creator should correctly render passing tests 1`] = `
 </html>"
 `;
 
+exports[`html-report-creator should ignore null plainFailureMessages 1`] = `
+"<?xml version=\\"1.0\\"?>
+<html>
+  <head>
+    <meta charset=\\"utf-8\\"/>
+    <title>Jest test results</title>
+    <style type=\\"text/css\\">
+  html, body {
+    font-family: sans-serif;
+    font-size: 1rem;
+  }
+  body {
+    padding: 1rem 1rem;
+  }
+  .summary {
+    color: #999;
+    margin-bottom: 1em;
+  }
+  .suite-info {
+    padding-bottom: 1em;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: black;
+  }
+  .suite-table {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .suite-table tr.passed {
+    background-color: mintcream;
+    color: green;
+  }
+  .suite-table tr.failed {
+    background-color: LavenderBlush;
+    color: red;
+  }
+  .suite-table td {
+    font-size: 0.85rem;
+    border-bottom: 1px solid #aaa;
+    vertical-align: top;
+    padding: 0.5rem;
+  }
+  .suite-table span.result {
+    float: right;
+  }
+</style>
+  </head>
+  <div class=\\"summary\\">
+    <div>
+    Test Suites: 0 passed,
+    1 failed,
+    0 skipped,
+    1 total
+  </div>
+    <div>
+    Tests: 0 passed,
+    1 failed,
+    0 skipped,
+    1 total
+  </div>
+  </div>
+  <div class=\\"suite-info\\">
+      /path/to/__tests__/test.spec.js
+      (0.297s)
+    </div>
+  <table class=\\"suite-table\\">
+    <tr class=\\"failed\\">
+      <td>
+        ✘ test should work
+        <span class=\\"result\\">failed in 0.004s</span>
+        <div/>
+      </td>
+    </tr>
+  </table>
+</html>"
+`;
+
 exports[`html-report-creator should not display pending tests 1`] = `
 "<?xml version=\\"1.0\\"?>
 <html>

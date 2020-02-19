@@ -82,7 +82,7 @@ module.exports = (result) => {
                 // TODO: need to find better way to when it is an image snapshot
                 if (plainFailureMessage.includes('__image_snapshots__/')) {
                   const imageDiffUrl = `${plainFailureMessage.match(':(.*).png')[1]}.png`;
-                  failureMsgDiv.ele('a', {href: imageDiffUrl});
+                  failureMsgDiv.ele('a', { href: imageDiffUrl });
                 }
                 failureMsgDiv.ele('pre', plainFailureMessage);
               }
