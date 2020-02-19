@@ -78,12 +78,14 @@ module.exports = (result) => {
             const failureMsgDiv = testTd.ele('div');
             test.failureMessages.forEach((failureMsg) => {
               const plainFailureMessage = stripAnsi(failureMsg);
-              // TODO: need to find better way to when it is an image snapshot
-              if (plainFailureMessage.includes('__image_snapshots__/')) {
-                const imageDiffUrl = `${plainFailureMessage.match(':(.*).png')[1]}.png`;
-                failureMsgDiv.ele('a', { href: imageDiffUrl });
+              if (plainFailureMessage) {
+                // TODO: need to find better way to when it is an image snapshot
+                if (plainFailureMessage.includes('__image_snapshots__/')) {
+                  const imageDiffUrl = `${plainFailureMessage.match(':(.*).png')[1]}.png`;
+                  failureMsgDiv.ele('a', {href: imageDiffUrl});
+                }
+                failureMsgDiv.ele('pre', plainFailureMessage);
               }
-              failureMsgDiv.ele('pre', plainFailureMessage);
             });
           }
         }
@@ -94,3 +96,4 @@ module.exports = (result) => {
 
   return result;
 };
+
