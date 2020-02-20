@@ -1,7 +1,7 @@
 {
   "name": "amex-jest-preset",
   "description": "An opinionated Jest preset",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "keywords": [
     "jest",
     "preset",
@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "is-ci": "^1.0.10",
-    "jest-json-schema": "^1.2.0",
     "mkdirp": "^0.5.1",
     "strip-ansi": "^3.0.1",
     "xmlbuilder": "^9.0.0"
@@ -34,9 +33,9 @@
     "eslint": "^4.18.2",
     "eslint-config-amex": "^6.0.0",
     "githook-scripts": "^1.0.1",
-    "jest": "^23.0.2",
-    "lodash": "^4.17.4",
-    "semantic-release": "^17.0.4"
+    "semantic-release": "^17.0.4",
+    "jest": "^25.1.0",
+    "lodash": "^4.17.4"
   },
   "peerDependencies": {
     "jest": ">=23.0.0"
