@@ -25,7 +25,6 @@ describe('jest-preset.js', () => {
 
     expect(jestPreset).toMatchObject({
       cache: expect.any(Boolean),
-      setupTestFrameworkScriptFile: expect.any(String),
       testResultsProcessor: expect.any(String),
       collectCoverage: true,
       collectCoverageFrom: [
