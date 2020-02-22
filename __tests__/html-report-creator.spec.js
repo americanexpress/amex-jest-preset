@@ -205,7 +205,9 @@ describe('html-report-creator', () => {
     const mockResult = buildMockResult();
 
     createHtmlReport(mockResult);
-    expect(fs.writeFileSync.mock.calls[0][0]).toBe('/path/to/something/test-results/test-report.html');
+    expect(fs.writeFileSync.mock.calls[0][0])
+      // eslint-disable-next-line no-useless-escape
+      .toMatch(/[\\\/]path[\\\/]to[\\\/]something[\\\/]test-results[\\\/]test-report.html/);
   });
 
   it('should write output to JEST_TEST_REPORT_PATH if variable exists', () => {
