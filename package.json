@@ -10,12 +10,12 @@
   ],
   "main": "jest-preset.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest && npm run test:git-history",
     "test:git-history": "commitlint --from origin/master --to HEAD",
-    "posttest": "npm run lint && npm run test:git-history",
+    "test:lockfile": "lockfile-lint -p package-lock.json -t npm -a npm -o https: -c -i",
+    "posttest": "npm run lint && npm run test:lockfile",
     "lint": "eslint ./ --ignore-path .gitignore --ext .js",
-    "prepublishOnly": "npm test",
-    "githook:commit-msg": "commitlint --edit $GIT_PARAMS"
+    "prepublishOnly": "npm test"
   },
   "dependencies": {
     "is-ci": "^1.0.10",
@@ -25,17 +25,19 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^7.5.0",
+    "@commitlint/config-conventional": "^8.3.4",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
-    "amex-jest-preset": ".",
+    "amex-jest-preset": "*",
     "eslint": "^6.8.0",
     "eslint-config-amex": "^6.0.0",
     "githook-scripts": "^1.0.1",
-    "semantic-release": "^17.0.4",
+    "husky": "^4.2.3",
     "jest": "^25.1.0",
-    "lodash": "^4.17.4"
+    "lockfile-lint": "^4.1.0",
+    "lodash": "^4.17.4",
+    "semantic-release": "^17.0.4"
   },
   "peerDependencies": {
     "jest": ">=23.0.0"
@@ -73,5 +75,11 @@
       "@semantic-release/github"
     ],
     "branch": "master"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
