@@ -10,5 +10,8 @@ jest-preset.json
 .DS_Store
 npm-debug.log
 
+# build
+*.tgz
+
 # webstorm
 .idea
