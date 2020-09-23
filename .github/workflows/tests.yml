@@ -37,3 +37,7 @@ jobs:
       run: npm run test:lockfile
       env:
         NODE_ENV: production
+    - name: Lint
+      run: npm run test:lint
+      env:
+        NODE_ENV: production
