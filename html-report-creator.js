@@ -92,7 +92,16 @@ module.exports = (result) => {
       });
     }
   });
-  writeFile(process.env.JEST_TEST_REPORT_PATH || path.join(process.cwd(), 'test-results/test-report.html'), htmlOutput);
+  writeFile(
+    process.env.JEST_TEST_REPORT_PATH || path.join(process.cwd(),
+      'test-results/test-report.html'),
+    htmlOutput.end({
+      pretty: true,
+      indent: '  ',
+      newline: '\n',
+      allowEmpty: false,
+    })
+  );
 
   return result;
 };

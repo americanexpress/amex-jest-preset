@@ -16,15 +16,6 @@ const merge = require('lodash/merge');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
 
-function prettyPrintHtml(rawHtml) {
-  return rawHtml.end({
-    pretty: true,
-    indent: '  ',
-    newline: '\n',
-    allowEmpty: false,
-  });
-}
-
 function buildMockResult(mockResult = {}) {
   const defaultMockResult = {
     numFailedTestSuites: 0,
@@ -97,7 +88,7 @@ describe('html-report-creator', () => {
 
     createHtmlReport(mockResult);
     expect(
-      prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
+      fs.writeFileSync.mock.calls[0][1]
     ).toMatchSnapshot();
   });
 
@@ -119,7 +110,7 @@ describe('html-report-creator', () => {
 
     createHtmlReport(mockResult);
     expect(
-      prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
+      fs.writeFileSync.mock.calls[0][1]
     ).toMatchSnapshot();
   });
 
@@ -129,7 +120,7 @@ describe('html-report-creator', () => {
 
     createHtmlReport(mockResult);
     expect(
-      prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
+      fs.writeFileSync.mock.calls[0][1]
     ).toMatchSnapshot();
   });
 
@@ -151,7 +142,7 @@ describe('html-report-creator', () => {
 
     createHtmlReport(mockResult);
     expect(
-      prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
+      fs.writeFileSync.mock.calls[0][1]
     ).toMatchSnapshot();
   });
 
@@ -173,7 +164,7 @@ describe('html-report-creator', () => {
 
     createHtmlReport(mockResult);
     expect(
-      prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
+      fs.writeFileSync.mock.calls[0][1]
     ).toMatchSnapshot();
   });
 
@@ -195,7 +186,7 @@ describe('html-report-creator', () => {
 
     createHtmlReport(mockResult);
     expect(
-      prettyPrintHtml(fs.writeFileSync.mock.calls[0][1])
+      fs.writeFileSync.mock.calls[0][1]
     ).toMatchSnapshot();
   });
 
