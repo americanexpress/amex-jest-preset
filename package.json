@@ -11,7 +11,7 @@
   "main": "jest-preset.js",
   "scripts": {
     "test": "jest",
-    "test:git-history": "commitlint --from origin/master --to HEAD",
+    "test:git-history": "commitlint --from origin/5.x --to HEAD",
     "posttest": "npm run lint && npm run test:git-history",
     "lint": "eslint ./ --ignore-path .gitignore --ext .js",
     "prepublishOnly": "npm test",
