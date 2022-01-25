@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - 5.x
 
 jobs:
   prepare:
@@ -23,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
       - name: Install dependencies
         run: npm ci
       - name: Release
