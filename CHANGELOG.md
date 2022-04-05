@@ -1,3 +1,10 @@
+## [6.1.1](https://github.com/americanexpress/amex-jest-preset/compare/v6.1.0...v6.1.1) (2022-04-05)
+
+
+### Bug Fixes
+
+* **labeler:** fix globing ([94bb996](https://github.com/americanexpress/amex-jest-preset/commit/94bb996fda1f75c7d6e2f38a66fa1d672882582a))
+
 # [6.1.0](https://github.com/americanexpress/amex-jest-preset/compare/v6.0.1...v6.1.0) (2020-05-26)
 
 
