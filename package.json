@@ -40,7 +40,7 @@
     "jest": "^25.1.0",
     "lockfile-lint": "^4.3.7",
     "lodash": "^4.17.4",
-    "semantic-release": "^17.1.2"
+    "semantic-release": "^19.0.3"
   },
   "peerDependencies": {
     "jest": ">=23.0.0"
