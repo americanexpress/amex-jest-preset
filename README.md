@@ -21,8 +21,6 @@ For a React specific Jest preset use: [amex-jest-preset-react](https://github.co
 
 - [coverageThreshold](http://facebook.github.io/jest/docs/en/configuration.html#coveragethreshold-object) tells Jest to return failure unless code coverage is 100% for branch, function, line, and statement. (Yes this does mean that your build will fail if you don't have 100% code coverage)
 
-- [modulePathIgnorePatterns](https://facebook.github.io/jest/docs/en/configuration.html#modulepathignorepatterns-array-string) tells Jest to not even consider `npm-cache` and `npm` directories for module loading. This prevents issues on CI server where `npm-cache` may be shared across build workspaces.
-
 - [testEnvironment](https://jestjs.io/docs/en/configuration.html#testenvironment-string) tells Jest to use `node` as its test environment. This is done for performance reasons as the full `jsdom` environment is not needed for most tests and including it slows Jest startup time considerably.
 
 - [testResultsProcessor](http://facebook.github.io/jest/docs/en/configuration.html#testresultsprocessor-string) is used to output test results onto our HTML report creator. That way pretty HTML test results are created in `<rootDir>/test-results/`

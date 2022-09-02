@@ -42,8 +42,4 @@ module.exports = {
       statements: 100,
     },
   },
-  modulePathIgnorePatterns: [
-    'npm-cache',
-    '.npm',
-  ],
 };
