@@ -74,7 +74,7 @@ module.exports = (result) => {
           const testTd = testTr.ele('td', `${statusIcon} ${test.fullName}`);
           testTd.ele('span', { class: 'result' }, `${test.status} in ${test.duration / 1000}s`);
 
-          if (test.failureMessages.length !== 0) {
+          if (test.failureMessages.length > 0) {
             const failureMsgDiv = testTd.ele('div');
             test.failureMessages.forEach((failureMsg) => {
               const plainFailureMessage = stripAnsi(failureMsg);

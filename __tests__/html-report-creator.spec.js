@@ -30,7 +30,8 @@ function buildMockResult(mockResult = {}) {
     startTime: 1497400767268,
     success: true,
     testResults: [
-      { console: [],
+      {
+        console: [],
         perfStats: {
           end: 1497401364334,
           start: 1497401364037,
@@ -56,7 +57,6 @@ function setupTest() {
   fs.writeFileSync = jest.fn();
   process.cwd = jest.fn(() => '/path/to/something');
 
-  // eslint-disable-next-line global-require
   return require('../html-report-creator');
 }
 
@@ -77,10 +77,11 @@ describe('html-report-creator', () => {
     const mockResult = buildMockResult(
       {
         testResults: [
-          { testExecError: {
-            message: 'error!',
-            stack: 'stacktrace for error',
-          },
+          {
+            testExecError: {
+              message: 'error!',
+              stack: 'stacktrace for error',
+            },
           },
         ],
       }
@@ -197,8 +198,8 @@ describe('html-report-creator', () => {
 
     createHtmlReport(mockResult);
     expect(fs.writeFileSync.mock.calls[0][0])
-      // eslint-disable-next-line no-useless-escape
-      .toMatch(/[\\\/]path[\\\/]to[\\\/]something[\\\/]test-results[\\\/]test-report.html/);
+
+      .toMatch(/[/\\]path[/\\]to[/\\]something[/\\]test-results[/\\]test-report.html/);
   });
 
   it('should write output to JEST_TEST_REPORT_PATH if variable exists', () => {
