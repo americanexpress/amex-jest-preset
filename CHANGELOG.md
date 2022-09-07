@@ -1,3 +1,10 @@
+## [6.1.2](https://github.com/americanexpress/amex-jest-preset/compare/v6.1.1...v6.1.2) (2022-09-07)
+
+
+### Bug Fixes
+
+* **preset:** modulePathIgnorePatterns prevented jest from finding tests ([#49](https://github.com/americanexpress/amex-jest-preset/issues/49)) ([bb39161](https://github.com/americanexpress/amex-jest-preset/commit/bb391618e957f9d6ffc256467a65e597321c5431))
+
 ## [6.1.1](https://github.com/americanexpress/amex-jest-preset/compare/v6.1.0...v6.1.1) (2022-04-05)
 
 
