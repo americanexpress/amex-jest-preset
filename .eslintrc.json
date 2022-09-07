@@ -1,3 +1,10 @@
 {
-  "extends": "amex"
+  "extends": "amex",
+  "overrides": [{
+    "files": ["__tests__/**"],
+      "extends": "amex/test",
+      "rules": {
+        "global-require": 0
+      }
+  }]
 }
