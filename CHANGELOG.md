@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/americanexpress/amex-jest-preset/compare/v7.0.0...v7.0.1) (2023-01-13)
+
+
+### Bug Fixes
+
+* **commitlint:** extend footer length ([#60](https://github.com/americanexpress/amex-jest-preset/issues/60)) ([6da5f71](https://github.com/americanexpress/amex-jest-preset/commit/6da5f713201378890ddcdb6c7d478ccc2e1cd449))
+
 # [7.0.0](https://github.com/americanexpress/amex-jest-preset/compare/v6.1.2...v7.0.0) (2023-01-13)
 
 
