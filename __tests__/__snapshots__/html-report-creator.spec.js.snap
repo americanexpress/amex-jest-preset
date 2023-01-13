@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`html-report-creator should correctly render failing tests 1`] = `
-"<?xml version=\\"1.0\\"?>
+"<?xml version="1.0"?>
 <html>
   <head>
-    <meta charset=\\"utf-8\\"/>
+    <meta charset="utf-8"/>
     <title>Jest test results</title>
-    <style type=\\"text/css\\">
+    <style type="text/css">
   html, body {
     font-family: sans-serif;
     font-size: 1rem;
@@ -47,7 +47,7 @@ exports[`html-report-creator should correctly render failing tests 1`] = `
   }
 </style>
   </head>
-  <div class=\\"summary\\">
+  <div class="summary">
     <div>
     Test Suites: 0 passed,
     1 failed,
@@ -61,15 +61,15 @@ exports[`html-report-creator should correctly render failing tests 1`] = `
     1 total
   </div>
   </div>
-  <div class=\\"suite-info\\">
+  <div class="suite-info">
       /path/to/__tests__/test.spec.js
       (0.297s)
     </div>
-  <table class=\\"suite-table\\">
-    <tr class=\\"failed\\">
+  <table class="suite-table">
+    <tr class="failed">
       <td>
         ✘ test should work
-        <span class=\\"result\\">failed in 0.004s</span>
+        <span class="result">failed in 0.004s</span>
         <div>
           <pre>This test failed yo!</pre>
         </div>
@@ -80,12 +80,12 @@ exports[`html-report-creator should correctly render failing tests 1`] = `
 `;
 
 exports[`html-report-creator should correctly render passing tests 1`] = `
-"<?xml version=\\"1.0\\"?>
+"<?xml version="1.0"?>
 <html>
   <head>
-    <meta charset=\\"utf-8\\"/>
+    <meta charset="utf-8"/>
     <title>Jest test results</title>
-    <style type=\\"text/css\\">
+    <style type="text/css">
   html, body {
     font-family: sans-serif;
     font-size: 1rem;
@@ -126,7 +126,7 @@ exports[`html-report-creator should correctly render passing tests 1`] = `
   }
 </style>
   </head>
-  <div class=\\"summary\\">
+  <div class="summary">
     <div>
     Test Suites: 1 passed,
     0 failed,
@@ -140,15 +140,15 @@ exports[`html-report-creator should correctly render passing tests 1`] = `
     1 total
   </div>
   </div>
-  <div class=\\"suite-info\\">
+  <div class="suite-info">
       /path/to/__tests__/test.spec.js
       (0.297s)
     </div>
-  <table class=\\"suite-table\\">
-    <tr class=\\"passed\\">
+  <table class="suite-table">
+    <tr class="passed">
       <td>
         ✔ test should work
-        <span class=\\"result\\">passed in 0.004s</span>
+        <span class="result">passed in 0.004s</span>
       </td>
     </tr>
   </table>
@@ -156,12 +156,12 @@ exports[`html-report-creator should correctly render passing tests 1`] = `
 `;
 
 exports[`html-report-creator should ignore null plainFailureMessages 1`] = `
-"<?xml version=\\"1.0\\"?>
+"<?xml version="1.0"?>
 <html>
   <head>
-    <meta charset=\\"utf-8\\"/>
+    <meta charset="utf-8"/>
     <title>Jest test results</title>
-    <style type=\\"text/css\\">
+    <style type="text/css">
   html, body {
     font-family: sans-serif;
     font-size: 1rem;
@@ -202,7 +202,7 @@ exports[`html-report-creator should ignore null plainFailureMessages 1`] = `
   }
 </style>
   </head>
-  <div class=\\"summary\\">
+  <div class="summary">
     <div>
     Test Suites: 0 passed,
     1 failed,
@@ -216,15 +216,15 @@ exports[`html-report-creator should ignore null plainFailureMessages 1`] = `
     1 total
   </div>
   </div>
-  <div class=\\"suite-info\\">
+  <div class="suite-info">
       /path/to/__tests__/test.spec.js
       (0.297s)
     </div>
-  <table class=\\"suite-table\\">
-    <tr class=\\"failed\\">
+  <table class="suite-table">
+    <tr class="failed">
       <td>
         ✘ test should work
-        <span class=\\"result\\">failed in 0.004s</span>
+        <span class="result">failed in 0.004s</span>
         <div/>
       </td>
     </tr>
@@ -233,12 +233,12 @@ exports[`html-report-creator should ignore null plainFailureMessages 1`] = `
 `;
 
 exports[`html-report-creator should not display pending tests 1`] = `
-"<?xml version=\\"1.0\\"?>
+"<?xml version="1.0"?>
 <html>
   <head>
-    <meta charset=\\"utf-8\\"/>
+    <meta charset="utf-8"/>
     <title>Jest test results</title>
-    <style type=\\"text/css\\">
+    <style type="text/css">
   html, body {
     font-family: sans-serif;
     font-size: 1rem;
@@ -279,7 +279,7 @@ exports[`html-report-creator should not display pending tests 1`] = `
   }
 </style>
   </head>
-  <div class=\\"summary\\">
+  <div class="summary">
     <div>
     Test Suites: 0 passed,
     0 failed,
@@ -293,21 +293,21 @@ exports[`html-report-creator should not display pending tests 1`] = `
     1 total
   </div>
   </div>
-  <div class=\\"suite-info\\">
+  <div class="suite-info">
       /path/to/__tests__/test.spec.js
       (0.297s)
     </div>
-  <table class=\\"suite-table\\"/>
+  <table class="suite-table"/>
 </html>"
 `;
 
 exports[`html-report-creator should render correctly if there are test execution errors in a suite 1`] = `
-"<?xml version=\\"1.0\\"?>
+"<?xml version="1.0"?>
 <html>
   <head>
-    <meta charset=\\"utf-8\\"/>
+    <meta charset="utf-8"/>
     <title>Jest test results</title>
-    <style type=\\"text/css\\">
+    <style type="text/css">
   html, body {
     font-family: sans-serif;
     font-size: 1rem;
@@ -348,7 +348,7 @@ exports[`html-report-creator should render correctly if there are test execution
   }
 </style>
   </head>
-  <div class=\\"summary\\">
+  <div class="summary">
     <div>
     Test Suites: 1 passed,
     0 failed,
@@ -362,12 +362,12 @@ exports[`html-report-creator should render correctly if there are test execution
     1 total
   </div>
   </div>
-  <div class=\\"suite-info\\">
+  <div class="suite-info">
       /path/to/__tests__/test.spec.js
       (0.297s)
     </div>
-  <table class=\\"suite-table\\">
-    <tr class=\\"failed\\">
+  <table class="suite-table">
+    <tr class="failed">
       <td>
         <div>Test suite failed to run:</div>
         <pre>error!
@@ -379,12 +379,12 @@ stacktrace for error</pre>
 `;
 
 exports[`html-report-creator should render failure message as a link if test is for an image snapshot 1`] = `
-"<?xml version=\\"1.0\\"?>
+"<?xml version="1.0"?>
 <html>
   <head>
-    <meta charset=\\"utf-8\\"/>
+    <meta charset="utf-8"/>
     <title>Jest test results</title>
-    <style type=\\"text/css\\">
+    <style type="text/css">
   html, body {
     font-family: sans-serif;
     font-size: 1rem;
@@ -425,7 +425,7 @@ exports[`html-report-creator should render failure message as a link if test is 
   }
 </style>
   </head>
-  <div class=\\"summary\\">
+  <div class="summary">
     <div>
     Test Suites: 0 passed,
     1 failed,
@@ -439,17 +439,17 @@ exports[`html-report-creator should render failure message as a link if test is 
     1 total
   </div>
   </div>
-  <div class=\\"suite-info\\">
+  <div class="suite-info">
       /path/to/__tests__/test.spec.js
       (0.297s)
     </div>
-  <table class=\\"suite-table\\">
-    <tr class=\\"failed\\">
+  <table class="suite-table">
+    <tr class="failed">
       <td>
         ✘ test should work
-        <span class=\\"result\\">failed in 0.004s</span>
+        <span class="result">failed in 0.004s</span>
         <div>
-          <a href=\\" /path/to/__image_snapshots__/__diff_output__/test-diff.png\\"/>
+          <a href=" /path/to/__image_snapshots__/__diff_output__/test-diff.png"/>
           <pre>Image snapshot failed.
 See diff for details: /path/to/__image_snapshots__/__diff_output__/test-diff.png</pre>
         </div>
