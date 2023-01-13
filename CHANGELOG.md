@@ -1,3 +1,15 @@
+# [7.0.0](https://github.com/americanexpress/amex-jest-preset/compare/v6.1.2...v7.0.0) (2023-01-13)
+
+
+### chore
+
+* **updatedependencies:** update various dependencies ([#58](https://github.com/americanexpress/amex-jest-preset/issues/58)) ([757cd68](https://github.com/americanexpress/amex-jest-preset/commit/757cd681a9d2106eadb7b2cda14fc7c36e40833a))
+
+
+### BREAKING CHANGES
+
+* **updatedependencies:** drop the support of node 10 12 and 14
+
 ## [6.1.2](https://github.com/americanexpress/amex-jest-preset/compare/v6.1.1...v6.1.2) (2022-09-07)
 
 

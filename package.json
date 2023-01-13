@@ -1,7 +1,7 @@
 {
   "name": "amex-jest-preset",
   "description": "An opinionated Jest preset",
-  "version": "6.1.2",
+  "version": "7.0.0",
   "keywords": [
     "jest",
     "preset",
