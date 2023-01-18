@@ -15,6 +15,23 @@
 
 * **updatedependencies:** drop the support of node 10 12 and 14
 
+# [7.0.0](https://github.com/americanexpress/amex-jest-preset/compare/v6.1.2...v7.0.0) (2023-01-18)
+
+
+### Bug Fixes
+
+* **commitlint:** extend footer length ([#60](https://github.com/americanexpress/amex-jest-preset/issues/60)) ([6da5f71](https://github.com/americanexpress/amex-jest-preset/commit/6da5f713201378890ddcdb6c7d478ccc2e1cd449))
+
+
+### chore
+
+* **updatedependencies:** update various dependencies ([#58](https://github.com/americanexpress/amex-jest-preset/issues/58)) ([757cd68](https://github.com/americanexpress/amex-jest-preset/commit/757cd681a9d2106eadb7b2cda14fc7c36e40833a))
+
+
+### BREAKING CHANGES
+
+* **updatedependencies:** drop the support of node 10 12 and 14
+
 ## [7.0.1](https://github.com/americanexpress/amex-jest-preset/compare/v7.0.0...v7.0.1) (2023-01-13)
 
 
