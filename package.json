@@ -21,7 +21,7 @@
   "dependencies": {
     "is-ci": "^1.0.10",
     "mkdirp": "^0.5.1",
-    "strip-ansi": "^5.0.0",
+    "strip-ansi": "6.0.1",
     "xmlbuilder": "^9.0.0"
   },
   "devDependencies": {
